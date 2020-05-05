@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/Connect_Button"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#00BCD4"
+        android:text="Connect"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#673AB7"
+        android:textColorLink="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Disconnect_Button"
+        android:layout_width="165dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="#E91E63"
+        android:text="Disconnect"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#00BCD4"
+        android:textColorLink="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Connect_Button"
+        app:layout_constraintStart_toEndOf="@+id/Connect_Button"
+        app:layout_constraintTop_toTopOf="@+id/Connect_Button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/Leveling_Button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:text="Leveling"
+        android:textColor="#000000"
+        android:textColorHighlight="#4C6133"
+        android:background="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/Disconnect_Button"
+        app:layout_constraintStart_toEndOf="@+id/Connect_Button"
+        app:layout_constraintTop_toBottomOf="@+id/Disconnect_Button" />
+
+    <Button
+        android:id="@+id/Continuous_Mode_Button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="Continuous Mode"
+        android:textSize="20sp"
+        android:textColorHighlight="#4C6133"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/Leveling_Button"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/Leveling_Button"
+        app:layout_constraintTop_toBottomOf="@+id/Leveling_Button" />
+
+    <Button
+        android:id="@+id/Interrupt_Mode_Button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
+        android:text="Interrupt Mode"
+        android:textColor="#000000"
+        android:textColorHighlight="#4C6133"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/Leveling_Button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Leveling_Button"
+        app:layout_constraintTop_toBottomOf="@+id/Continuous_Mode_Button" />
+
+    <Button
+        android:id="@+id/Midi_Music_Mode_Button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
+        android:text="MIDI Music mode"
+        android:textColorHighlight="#4C6133"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/Leveling_Button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Leveling_Button"
+        app:layout_constraintTop_toBottomOf="@+id/Interrupt_Mode_Button" />
+
+    <Button
+        android:id="@+id/Piano_Mode_Button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
+        android:text="Piano mode"
+        android:textColorHighlight="#4C6133"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/Leveling_Button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Leveling_Button"
+        app:layout_constraintTop_toBottomOf="@+id/Midi_Music_Mode_Button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

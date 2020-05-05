@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Midi_Music_Mode_Activity">
+
+    <Button
+        android:id="@+id/Load_File_Button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="4dp"
+        android:background="#FFFFFF"
+        android:textSize="20sp"
+        android:text="Load File"
+        app:layout_constraintStart_toEndOf="@+id/Back_Button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Back_Button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/design_default_color_secondary"
+        android:baselineAlignBottom="true"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="@+id/Show_Needed_Level_Text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Music_Name_Text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Music Name"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/Load_File_Button"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="@+id/Load_File_Button"
+        app:layout_constraintTop_toBottomOf="@+id/Load_File_Button" />
+
+    <Button
+        android:id="@+id/Start_Play_Button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:background="#FFFFFF"
+        android:text="Start Play"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/Load_File_Button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Load_File_Button"
+        app:layout_constraintTop_toBottomOf="@+id/Music_Name_Text_View" />
+
+    <Button
+        android:id="@+id/Stop_Play_Button"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="#FFFFFF"
+        android:text="Stop Play"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/Load_File_Button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Load_File_Button"
+        app:layout_constraintTop_toBottomOf="@+id/Start_Play_Button" />
+
+    <SeekBar
+        android:id="@+id/Music_Speed_Bar"
+        android:layout_width="339dp"
+        android:layout_height="47dp"
+        android:layout_weight="1"
+        android:max="100"
+        android:min="0"
+        android:progress="50"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/Stop_Play_Button"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="@+id/Stop_Play_Button"
+        app:layout_constraintTop_toBottomOf="@+id/Music_Speed_Text_View"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/Music_Speed_Text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Music Volume"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/Stop_Play_Button"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="@+id/Stop_Play_Button"
+        app:layout_constraintTop_toBottomOf="@+id/Stop_Play_Button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

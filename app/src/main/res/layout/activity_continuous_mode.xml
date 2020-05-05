@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Continuous_Mode">
+
+    <TextView
+        android:id="@+id/Stop_Frequency_Text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop Frequency"
+        app:layout_constraintBottom_toBottomOf="@+id/Stop_Frequency_Edit_Text"
+        app:layout_constraintEnd_toStartOf="@+id/Stop_Frequency_Edit_Text"
+        app:layout_constraintStart_toStartOf="@+id/Start_Frequency_Text_View"
+        app:layout_constraintTop_toBottomOf="@+id/Start_Frequency_Edit_Text" />
+
+    <EditText
+        android:id="@+id/Frequency_Of_Output_Signal_Edit_Text"
+        android:layout_width="141dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Start_Sweep_Button"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/design_default_color_background"
+        android:text="Start Sweep"
+        app:layout_constraintStart_toStartOf="@+id/Stop_Frequency_Text_View"
+        app:layout_constraintTop_toBottomOf="@+id/Stop_Frequency_Edit_Text" />
+
+    <SeekBar
+        android:id="@+id/Output_Frequency_SeekBar"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:max="1000000"
+        android:min="100000"
+        android:progress="100000"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Frequency_Text"
+        app:layout_constraintTop_toBottomOf="@+id/Frequency_Of_Output_Signal_Edit_Text"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/Back_Button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/design_default_color_secondary"
+        android:baselineAlignBottom="true"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="@+id/Show_Needed_Level_Text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/Start_Frequency_Edit_Text"
+        android:layout_width="143dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toStartOf="@+id/Frequency_Text"
+        app:layout_constraintTop_toBottomOf="@+id/Output_Frequency_SeekBar" />
+
+    <EditText
+        android:id="@+id/Stop_Frequency_Edit_Text"
+        android:layout_width="146dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="@+id/Start_Frequency_Edit_Text"
+        app:layout_constraintStart_toStartOf="@+id/Start_Frequency_Edit_Text"
+        app:layout_constraintTop_toTopOf="@+id/Start_Frequency_Edit_Text" />
+
+    <SeekBar
+        android:id="@+id/Sweep_Frequency_Bar"
+        android:layout_width="195dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:max="1000"
+        android:min="1"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/Output_Frequency_SeekBar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Stop_Sweep_Button"
+        app:layout_constraintTop_toTopOf="@+id/Start_Sweep_Button"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/Set_Frequency_Confirm_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/Frequency_Of_Output_Signal_Edit_Text"
+        app:layout_constraintStart_toEndOf="@+id/Frequency_Of_Output_Signal_Edit_Text"
+        app:layout_constraintTop_toTopOf="@+id/Frequency_Of_Output_Signal_Edit_Text" />
+
+    <TextView
+        android:id="@+id/Frequency_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="15dp"
+        android:text="Frequency "
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Frequency_Of_Output_Signal_Edit_Text"
+        app:layout_constraintEnd_toStartOf="@+id/Frequency_Of_Output_Signal_Edit_Text"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Frequency_Of_Output_Signal_Edit_Text"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/Start_Frequency_Confirm_Button"
+        android:layout_width="93dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="1dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/Start_Frequency_Edit_Text"
+        app:layout_constraintEnd_toEndOf="@+id/Set_Frequency_Confirm_Button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Start_Frequency_Edit_Text"
+        app:layout_constraintTop_toTopOf="@+id/Start_Frequency_Edit_Text" />
+
+    <TextView
+        android:id="@+id/Start_Frequency_Text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Frequency"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Start_Frequency_Edit_Text"
+        app:layout_constraintEnd_toStartOf="@+id/Start_Frequency_Edit_Text"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="@+id/Output_Frequency_SeekBar"
+        app:layout_constraintTop_toTopOf="@+id/Start_Frequency_Edit_Text"
+        app:layout_constraintVertical_bias="0.375" />
+
+    <Button
+        android:id="@+id/Stop_Frequency_Confirm_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/Stop_Frequency_Edit_Text"
+        app:layout_constraintEnd_toEndOf="@+id/Start_Frequency_Confirm_Button"
+        app:layout_constraintStart_toStartOf="@+id/Start_Frequency_Confirm_Button"
+        app:layout_constraintTop_toTopOf="@+id/Stop_Frequency_Edit_Text" />
+
+    <TextView
+        android:id="@+id/Sweep_Frequency_Text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sweep Frequency"
+        app:layout_constraintBottom_toTopOf="@+id/Sweep_Frequency_Bar"
+        app:layout_constraintEnd_toEndOf="@+id/Sweep_Frequency_Bar"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/Sweep_Frequency_Bar" />
+
+    <TextView
+        android:id="@+id/Title_Text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Continuous Mode"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toEndOf="@+id/Back_Button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Duty_Cycle_Text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Duty Cycle:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Change_Sweep_Step_Button" />
+
+    <SeekBar
+        android:id="@+id/Duty_Cycle_SeekBar"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:max="100"
+        android:min="0"
+        android:progress="100"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/Sweep_Frequency_Bar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Output_Frequency_SeekBar"
+        app:layout_constraintTop_toTopOf="@+id/Duty_Cycle_Text_View"
+        tools:visibility="visible" />
+
+    <SeekBar
+        android:id="@+id/Needed_Level_Seek_Bar"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:max="6500"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="@+id/Duty_Cycle_SeekBar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Duty_Cycle_SeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/Duty_Cycle_SeekBar" />
+
+    <TextView
+        android:id="@+id/Needed_Level_Text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Level: "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/Duty_Cycle_Text_View"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/Duty_Cycle_Text_View"
+        app:layout_constraintTop_toBottomOf="@+id/Duty_Cycle_SeekBar" />
+
+    <Button
+        android:id="@+id/Level_To_Zero_Position_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level To Zero Position"
+        app:layout_constraintEnd_toEndOf="@+id/Needed_Level_Seek_Bar"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="@+id/Needed_Level_Seek_Bar"
+        app:layout_constraintTop_toBottomOf="@+id/Needed_Level_Seek_Bar" />
+
+    <Button
+        android:id="@+id/Stop_Sweep_Button"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="@color/design_default_color_background"
+        android:text="Stop Sweep"
+        app:layout_constraintBottom_toBottomOf="@+id/Start_Sweep_Button"
+        app:layout_constraintStart_toEndOf="@+id/Start_Sweep_Button"
+        app:layout_constraintTop_toTopOf="@+id/Start_Sweep_Button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/Change_Sweep_Step_Button"
+        android:layout_width="145dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/design_default_color_background"
+        android:text="Change Sweep Step"
+        app:layout_constraintEnd_toEndOf="@+id/Stop_Sweep_Button"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="@+id/Start_Sweep_Button"
+        app:layout_constraintTop_toBottomOf="@+id/Start_Sweep_Button" />
+
+    <TextView
+        android:id="@+id/Sweep_Step_Text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Sweep Step"
+        app:layout_constraintBottom_toBottomOf="@+id/Change_Sweep_Step_Button"
+        app:layout_constraintStart_toStartOf="@+id/Sweep_Frequency_Bar"
+        app:layout_constraintTop_toBottomOf="@+id/Sweep_Frequency_Bar"
+        app:layout_constraintVertical_bias="0.125" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

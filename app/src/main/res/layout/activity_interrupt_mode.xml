@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Interrupt_Mode_Activity">
+
+    <Button
+        android:id="@+id/Back_Button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/design_default_color_secondary"
+        android:baselineAlignBottom="true"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Stop_Interrupt_Frequency_Text_View"
+        android:layout_width="93dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="28dp"
+        android:text="Stop Interrupt Frequency"
+        app:layout_constraintEnd_toStartOf="@+id/Start_Interrupt_Frequency_Edit_Text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Start_Frequency_Text_View"
+        app:layout_constraintTop_toBottomOf="@+id/Start_Frequency_Text_View" />
+
+    <EditText
+        android:id="@+id/Frequency_Of_Interrupt_Signal_Edit_Text"
+        android:layout_width="141dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toBottomOf="@+id/Frequency_Text"
+        app:layout_constraintStart_toEndOf="@+id/Frequency_Text"
+        app:layout_constraintTop_toTopOf="@+id/Frequency_Text"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <SeekBar
+        android:id="@+id/Interrupt_Frequency_SeekBar"
+        android:layout_width="339dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:max="1000"
+        android:min="1"
+        android:progress="100"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/Set_Interrupt_Frequency_Confirm_Button"
+        app:layout_constraintStart_toStartOf="@+id/Frequency_Text"
+        app:layout_constraintTop_toBottomOf="@+id/Frequency_Text"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/Frequency_Text"
+        android:layout_width="108dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:text="Interrupt Frequency "
+        android:textSize="20sp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title_Text_View" />
+
+    <EditText
+        android:id="@+id/Start_Interrupt_Frequency_Edit_Text"
+        android:layout_width="143dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toEndOf="@+id/Start_Frequency_Text_View"
+        app:layout_constraintTop_toBottomOf="@+id/Interrupt_Frequency_SeekBar" />
+
+    <EditText
+        android:id="@+id/Stop_Interrupt_Frequency_Edit_Text"
+        android:layout_width="146dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="@+id/Start_Interrupt_Frequency_Edit_Text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Start_Interrupt_Frequency_Edit_Text"
+        app:layout_constraintTop_toBottomOf="@+id/Start_Interrupt_Frequency_Edit_Text" />
+
+    <Button
+        android:id="@+id/Set_Interrupt_Frequency_Confirm_Button"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/Frequency_Of_Interrupt_Signal_Edit_Text"
+        app:layout_constraintStart_toEndOf="@+id/Frequency_Of_Interrupt_Signal_Edit_Text"
+        app:layout_constraintTop_toTopOf="@+id/Frequency_Of_Interrupt_Signal_Edit_Text"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/Start_Interrupt_Frequency_Confirm_Button"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/Start_Interrupt_Frequency_Edit_Text"
+        app:layout_constraintEnd_toEndOf="@+id/Interrupt_Frequency_SeekBar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/Start_Interrupt_Frequency_Edit_Text"
+        app:layout_constraintTop_toTopOf="@+id/Start_Interrupt_Frequency_Edit_Text"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Start_Frequency_Text_View"
+        android:layout_width="97dp"
+        android:layout_height="34dp"
+        android:text="Start Interrupt Frequency"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/Interrupt_Frequency_SeekBar"
+        app:layout_constraintTop_toTopOf="@+id/Start_Interrupt_Frequency_Edit_Text" />
+
+    <Button
+        android:id="@+id/Stop_Interrupt_Frequency_Confirm_Button"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/Stop_Interrupt_Frequency_Edit_Text"
+        app:layout_constraintEnd_toEndOf="@+id/Start_Interrupt_Frequency_Confirm_Button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Stop_Interrupt_Frequency_Edit_Text"
+        app:layout_constraintTop_toBottomOf="@+id/Start_Interrupt_Frequency_Edit_Text"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/Title_Text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="4dp"
+        android:text="Interrupt Mode"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/Back_Button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Interrupt_Duty_Cycle_Text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Interrupt Duty Cycle:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Stop_Interrupt_Frequency_Edit_Text" />
+
+    <SeekBar
+        android:id="@+id/Interrupt_Duty_Cycle_SeekBar"
+        android:layout_width="336dp"
+        android:layout_height="44dp"
+        android:layout_weight="1"
+        android:max="100"
+        android:min="0"
+        android:progress="10"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/Stop_Interrupt_Frequency_Confirm_Button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Start_Frequency_Text_View"
+        app:layout_constraintTop_toBottomOf="@+id/Interrupt_Duty_Cycle_Text_View"
+        tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/Frequency_Of_Output_Signal_Edit_Text"
+        android:layout_width="141dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toStartOf="@+id/Stop_Interrupt_Frequency_Edit_Text"
+        app:layout_constraintTop_toBottomOf="@+id/Interrupt_Duty_Cycle_SeekBar" />
+
+    <TextView
+        android:id="@+id/Frequency_Of_Output_Signal_Text_View"
+        android:layout_width="97dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="Frequency Of Output Signal"
+        app:layout_constraintEnd_toEndOf="@+id/Stop_Interrupt_Frequency_Text_View"
+        app:layout_constraintEnd_toStartOf="@+id/Frequency_Of_Output_Signal_Edit_Text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Stop_Interrupt_Frequency_Text_View"
+        app:layout_constraintTop_toTopOf="@+id/Frequency_Of_Output_Signal_Edit_Text" />
+
+    <Button
+        android:id="@+id/Frequency_Of_Output_Signal_Confirm_Button"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/Frequency_Of_Output_Signal_Edit_Text"
+        app:layout_constraintEnd_toEndOf="@+id/Stop_Interrupt_Frequency_Confirm_Button"
+        app:layout_constraintStart_toEndOf="@+id/Stop_Interrupt_Frequency_Edit_Text"
+        app:layout_constraintTop_toTopOf="@+id/Frequency_Of_Output_Signal_Edit_Text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
